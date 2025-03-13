@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Time Period" android:fontFamily="@font/poppins_medium"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+            <LinearLayout android:gravity="center" android:id="@+id/llBCITenure" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="10dp" android:layout_weight="1">
+                <EditText android:textSize="17dp" android:id="@+id/edtBCITenure" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:hint="00" android:layout_weight="6" android:inputType="number"/>
+                <ImageView android:id="@+id/imgClearBCITenure" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="6dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+            </LinearLayout>
+            <Button android:background="@drawable/borders_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Year" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Tenure(max 30yr)" android:fontFamily="@font/poppins_medium"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+            <LinearLayout android:gravity="center" android:id="@+id/llTenure" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="10dp" android:layout_weight="1">
+                <EditText android:textSize="17dp" android:id="@+id/edtTenure" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:hint="00" android:layout_weight="6" android:inputType="number"/>
+                <ImageView android:id="@+id/imgClearTenure" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="6dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_weight="1">
+                <Button android:id="@+id/btnBCIYear" android:background="@drawable/borders_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Year" android:layout_weight="1"/>
+                <Button android:id="@+id/btnBCIMonth" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Month" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+        <Button android:id="@+id/btnQuarterly" android:background="@drawable/borders_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Quarterly" android:layout_weight="1"/>
+        <Button android:id="@+id/btnMonthly" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Monthly" android:layout_weight="1"/>
+        <Button android:id="@+id/btnYearly" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Yearly" android:layout_weight="1"/>
+        <Button android:id="@+id/btnHalfYearly" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Half Yearly" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+        <Button android:textSize="11dp" android:background="@drawable/borders_green" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="10dp" android:text="Present\nValue" android:layout_weight="1"/>
+        <Button android:textSize="11dp" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="10dp" android:text="Payments" android:layout_weight="1.3"/>
+        <Button android:textSize="11dp" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="10dp" android:text="Future\nValue" android:layout_weight="1"/>
+        <Button android:textSize="11dp" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="10dp" android:text="Rate" android:layout_weight="0.8"/>
+        <Button android:textSize="11dp" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="match_parent" android:text="Periods" android:layout_weight="0.9"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+        <Button android:id="@+id/btnCGCFinalValue" android:background="@drawable/borders_green" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Final Value" android:layout_weight="1"/>
+        <Button android:id="@+id/btnCGCRate" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Rate" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

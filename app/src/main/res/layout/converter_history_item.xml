@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="right" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:layout_marginBottom="7dp">
+        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:gravity="center" android:id="@+id/txtCHFromAmount" android:layout_width="0dp" android:layout_height="match_parent" android:text="From" android:layout_weight="0.9"/>
+        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:gravity="center" android:id="@+id/txtCHCode" android:layout_width="0dp" android:layout_height="match_parent" android:text="Convert" android:layout_weight="1.2"/>
+        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:gravity="center" android:id="@+id/txtCHToAmount" android:layout_width="0dp" android:layout_height="match_parent" android:text="To" android:layout_weight="1.1"/>
+        <ImageView android:gravity="center" android:id="@+id/imgCHRemove" android:layout_width="0dp" android:layout_height="match_parent" android:src="@drawable/ic_delete_" android:layout_weight="0.8"/>
+    </LinearLayout>
+    <TextView android:textColor="#919191" android:id="@+id/txtCHDateAndTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15-04-2024 02:32 PM"/>
+    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="1dp" app:dividerColor="#dedede"/>
+</LinearLayout>

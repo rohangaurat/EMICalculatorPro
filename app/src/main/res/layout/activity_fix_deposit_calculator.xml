@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Banking Calculator" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <TextView android:textSize="20dp" android:textColor="#01ac3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginBottom="10dp" android:text="Fixed Deposit Calculator" android:fontFamily="@font/poppins_medium"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Investment Amount" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:id="@+id/llBFDInvestmentAmount" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtBFDInvestmentAmount" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="1000000" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                        <ImageView android:id="@+id/imgClearBFDInvestmentAmount" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Interest Rate(%)" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:id="@+id/llBFDInterestRate" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtBFDInterestRate" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="8" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                        <ImageView android:id="@+id/imgClearBFDInterestRate" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Time Period" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:id="@+id/llBFDTimePeriod" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="10dp" android:layout_weight="1">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtBFDTimePeriod" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:hint="10" android:layout_weight="6" android:inputType="number"/>
+                                        <ImageView android:id="@+id/imgClearBFDTimePeriod" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="6dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_weight="1">
+                                        <Button android:id="@+id/btnBFDYear" android:background="@drawable/borders_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Year" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                                        <Button android:id="@+id/btnBFDMonth" android:background="@drawable/background_basic_cal_gray" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Month" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+                                <Button android:textSize="11dp" android:id="@+id/btnBFDQuarterly" android:background="@drawable/borders_green" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Quarterly" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                                <Button android:textSize="11dp" android:id="@+id/btnBFDMonthly" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Monthly" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                                <Button android:textSize="11dp" android:id="@+id/btnBFDYearly" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Yearly" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                                <Button android:textSize="11dp" android:id="@+id/btnBFDHalfYearly" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Half Yearly" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp">
+                                <Button android:textSize="17dp" android:textColor="#ffffff" android:id="@+id/btnBFDCalculator" android:background="@drawable/background_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Calculator" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/poppins_medium"/>
+                                <Button android:textSize="17dp" android:textColor="#ffffff" android:id="@+id/btnBFDSave" android:background="@drawable/background_blue" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="Save" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Total Interest" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtBFDTotalInterest" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Investment Amount" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtBFDInvestmentAmount" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Total Amount" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtBFDTotalAmount" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="15dp" android:layout_weight="0.2">
+                                    <TextView android:textSize="17dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtBFDSaveDetils" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="See All Save Details" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:fontFamily="@font/poppins_medium"/>
+                                </RelativeLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@+id/llBFDTitle" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.8">
+                                    <LinearLayout android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="Time" android:layout_weight="1"/>
+                                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="Interest" android:layout_weight="1"/>
+                                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="Total Interest" android:layout_weight="1"/>
+                                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="Balance" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvBFD" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

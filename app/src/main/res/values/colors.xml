@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff1a73e8</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#ff1a73e8</color>
+
+    <color name="primarymain">#01ac3b</color>
+    <color name="colorlight">#FFFFFF</color>
+
+    <color name="colorlightdark">#FFFFFF</color>
+
+    <color name="adstext">#000000</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blackads">#1a1a1a</color>
+    <color name="black1">#4c4c4c</color>
+
+
+    <color name="gray">#d4d4d4</color>
+    <color name="light_blue_200">#ff81d4fa</color>
+    <color name="light_blue_50">#ffe1f5fe</color>
+    <color name="light_blue_600">#ff039be5</color>
+    <color name="light_blue_900">#ff01579b</color>
+
+
+</resources>

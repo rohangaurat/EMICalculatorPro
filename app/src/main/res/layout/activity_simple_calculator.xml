@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20sp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Basic Calculator" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout2" android:background="#f8f8f8" android:layout_width="match_parent" android:layout_height="150dp">
+                            <HorizontalScrollView android:id="@+id/scrollView" android:scrollbars="none" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginRight="30dp" android:measureAllChildren="false" android:fillViewport="true" android:layout_weight="1.2">
+                                <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent">
+                                    <TextView android:textSize="33dp" android:textColor="#2f2f30" android:gravity="center" android:id="@+id/input" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                            <LinearLayout android:gravity="bottom|right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginRight="30dp" android:layout_weight="0.8">
+                                <TextView android:textSize="30dp" android:textColor="#01ac3b" android:gravity="bottom|right|center_vertical|center_horizontal|center" android:id="@+id/output" android:padding="10dp" android:visibility="visible" android:layout_width="0dp" android:layout_height="match_parent" android:text="" android:layout_weight="3" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_below="@+id/linearLayout2">
+                            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                                <LinearLayout android:gravity="center" android:id="@+id/ac" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AC" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/percent" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/delete" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <ImageView android:gravity="center" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/delete_315"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/ans" android:background="@drawable/background_basic_cal_black" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="@color/white" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="=" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                                <LinearLayout android:gravity="center" android:id="@+id/n7" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n8" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n9" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/division" android:background="@drawable/background_basic_cal_green" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="@color/white" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="÷" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                                <LinearLayout android:gravity="center" android:id="@+id/n4" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n5" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n6" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="6" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/multiplication" android:background="@drawable/background_basic_cal_green" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="@color/white" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="x" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                                <LinearLayout android:gravity="center" android:id="@+id/n1" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n2" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n3" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/minus" android:background="@drawable/background_basic_cal_green" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="@color/white" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="-" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                                <LinearLayout android:gravity="center" android:id="@+id/n00" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/n0" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/npo" android:background="@drawable/background_basic_cal_gray" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="." android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:id="@+id/plus" android:background="@drawable/background_basic_cal_green" android:layout_width="0dp" android:layout_height="75dp" android:layout_margin="10dp" android:layout_weight="1">
+                                    <TextView android:textSize="25dp" android:textColor="@color/white" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="+" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

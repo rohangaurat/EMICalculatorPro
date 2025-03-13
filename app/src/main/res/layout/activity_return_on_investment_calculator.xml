@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Banking Calculator" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                                <TextView android:textSize="20dp" android:textColor="#01ac3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginBottom="10dp" android:text="Return On Investment Calculator" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                    <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Amount Invested" android:fontFamily="@font/poppins_medium"/>
+                                    <LinearLayout android:id="@+id/llROIAmountInvested" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                            <EditText android:textSize="17dp" android:id="@+id/edtROIAmountInvested" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10000" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                            <ImageView android:id="@+id/imgClearROIAmountInvested" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                    <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Amount Returned" android:fontFamily="@font/poppins_medium"/>
+                                    <LinearLayout android:id="@+id/llROIAmountReturned" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                            <EditText android:textSize="17dp" android:id="@+id/edtROIAmountReturned" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="15000" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                            <ImageView android:id="@+id/imgClearROIAmountReturned" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_weight="1">
+                                        <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pick From Date" android:fontFamily="@font/poppins_medium"/>
+                                        <LinearLayout android:gravity="center" android:id="@+id/llROIPickFromDate" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp">
+                                            <TextView android:textSize="17dp" android:textColor="#2f2f30" android:id="@+id/txtROIPickFromDate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="17/4/2024" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                            <ImageView android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="5dp" android:src="@drawable/ic_calendar" android:layout_weight="1"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_weight="1">
+                                        <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pick To Date" android:fontFamily="@font/poppins_medium"/>
+                                        <LinearLayout android:gravity="center" android:id="@+id/llROIPickToDate" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp">
+                                            <TextView android:textSize="17dp" android:textColor="#2f2f30" android:id="@+id/txtROIPickToDate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="17/4/2024" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                            <ImageView android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="5dp" android:src="@drawable/ic_calendar" android:layout_weight="1"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp">
+                                    <Button android:textSize="17dp" android:textColor="#ffffff" android:id="@+id/btnROICalculator" android:background="@drawable/background_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:text="Calculator" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                        <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Investment Period" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                        <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtROIInvestmentPeriod" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                        <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Gain or Loss" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                        <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtROIGainOrLoss" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                        <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Return on Investment(ROI) " android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                        <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtROIReturnOnInvestment" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                        <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Simple Annual ROI" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                        <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtROISimpleAnnual" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                        <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Compound Annual ROI" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                        <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtROICompoundAnnual" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

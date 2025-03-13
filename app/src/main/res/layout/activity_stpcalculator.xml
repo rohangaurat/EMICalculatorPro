@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mutual Fund And SIP" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <TextView android:textSize="20dp" android:textColor="#01ac3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginBottom="10dp" android:text="STP Calculator" android:fontFamily="@font/poppins_medium"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="STP Amount" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:id="@+id/llSTPAmount" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtSTPAmount" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="200000" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                        <ImageView android:id="@+id/imgClearSTPAmount" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Initial investment Amount" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:id="@+id/llSTPInitialInvestmentAmount" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtSTPInitialInvestmentAmount" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="1000000" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                        <ImageView android:id="@+id/imgClearSTPInitialInvestmentAmount" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Rate of Return- Transferor" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:id="@+id/llSTPRORTransferor" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtSTPRORTransferor" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="6" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                        <ImageView android:id="@+id/imgClearSTPRORTransferor" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Rate of Return- Transferee" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:id="@+id/llSTPRORTransferee" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtSTPRORTransferee" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="8" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                        <ImageView android:id="@+id/imgClearSTPRORTransferee" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Time Period" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                    <LinearLayout android:gravity="center" android:id="@+id/llSTPTenure" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="10dp" android:layout_weight="1">
+                                        <EditText android:textSize="17dp" android:id="@+id/edtSTPTenure" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:hint="10" android:layout_weight="6" android:inputType="number"/>
+                                        <ImageView android:id="@+id/imgClearSTPTenure" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="6dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                    </LinearLayout>
+                                    <Button android:background="@drawable/borders_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Months" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp"/>
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp">
+                                <Button android:textSize="17dp" android:textColor="#ffffff" android:id="@+id/btnSTPCalculator" android:background="@drawable/background_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Calculator" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Total Amount" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtSTPTotalAmount" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Total Profit" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtSTPTotalProfit" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Transferor Balance" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtSTPTransferorBalance" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                    <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Transferee Balance" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtSTPTransfereeBalance" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="top|right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                <TextView android:textSize="17dp" android:textColor="#01ac3b" android:id="@+id/txtSTPMoreDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="More Details" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

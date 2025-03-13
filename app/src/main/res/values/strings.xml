@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EMI Calculator Pro</string>
+
+    <string name="applovin_sdk_key">applovin_sdk_key</string>
+
+    <string name="first_check">I understand that sharing of inappropriate content will not be tolerated.</string>
+    <string name="second_check">I confirm that Im 18 years old or above.</string>
+    <string name="clickforprivacy">"By Clicking 'Get Started'. You are agree to above Terms of Use and Privacy Policy. "</string>
+
+
+</resources>

@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 35
+    namespace 'com.demo.cashloanemi'
+    defaultConfig {
+        applicationId "com.kokankart.cashloanemi"
+        minSdkVersion 23
+        targetSdkVersion 35
+        versionCode 2
+        versionName "2.0"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.4.0'
+    implementation 'androidx.work:work-runtime-ktx:2.7.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+
+    implementation "com.airbnb.android:lottie:3.4.0"
+
+    implementation 'com.google.android.gms:play-services-ads:21.3.0'
+    implementation 'com.google.ads.mediation:facebook:6.8.0.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.+'
+    implementation 'com.applovin:applovin-sdk:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+}

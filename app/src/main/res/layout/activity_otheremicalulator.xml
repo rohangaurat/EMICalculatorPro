@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.92"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:theme="@style/ToolbarColoredBackBlue"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:text="Others EMI Calculator"
+                            android:textColor="#2f2f30"
+                            android:textSize="18dp" />
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.08"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.11"
+                        android:orientation="vertical">
+
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:id="@+id/llLoanCal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#ffffff"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/llLoanCalArrow"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.8"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:text="Loan Calculator"
+                                            android:textColor="#2f2f30"
+                                            android:textSize="16dp" />
+
+                                        <ImageView
+                                            android:id="@+id/imgLoanCalArrow"
+                                            android:layout_width="0dp"
+                                            android:layout_height="20dp"
+                                            android:layout_weight="0.2"
+                                            android:src="@drawable/ic_down_arrow" />
+                                    </LinearLayout>
+                                    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" app:dividerColor="#dedede"/>
+                                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvLoanCalculatorName" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp"/>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@+id/llBankingCal" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+                                    <LinearLayout android:gravity="center" android:id="@+id/llBankingCalArrow" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Banking Calculator" android:layout_weight="0.8" android:fontFamily="@font/poppins_medium"/>
+                                        <ImageView android:id="@+id/imgBankingCalArrow" android:layout_width="0dp" android:layout_height="20dp" android:src="@drawable/ic_down_arrow" android:layout_weight="0.2"/>
+                                    </LinearLayout>
+                                    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" app:dividerColor="#dedede"/>
+                                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvBankingCalculatorName" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp"/>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@+id/llBusinessCal" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+                                    <LinearLayout android:gravity="center" android:id="@+id/llBusinessCalArrow" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Business Calculator" android:layout_weight="0.8" android:fontFamily="@font/poppins_medium"/>
+                                        <ImageView android:id="@+id/imgBusinessCalArrow" android:layout_width="0dp" android:layout_height="20dp" android:src="@drawable/ic_down_arrow" android:layout_weight="0.2"/>
+                                    </LinearLayout>
+                                    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" app:dividerColor="#dedede"/>
+                                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvBusinessCalculatorName" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp"/>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="vertical" android:id="@+id/llSIPCal" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+                                    <LinearLayout android:gravity="center" android:id="@+id/llSIPCalArrow" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Mutual Fund &amp; SIP Calculator" android:layout_weight="0.8" android:fontFamily="@font/poppins_medium"/>
+                                        <ImageView android:id="@+id/imgSIPCalArrow" android:layout_width="0dp" android:layout_height="20dp" android:src="@drawable/ic_down_arrow" android:layout_weight="0.2"/>
+                                    </LinearLayout>
+                                    <com.google.android.material.divider.MaterialDivider android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" app:dividerColor="#dedede"/>
+                                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvSIPCalculatorName" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.core.widget.NestedScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.89"
+                        android:gravity="bottom|center_vertical|center_horizontal|center">
+
+                        <RelativeLayout
+                            android:id="@+id/btm1"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true">
+
+                            <include
+                                android:id="@+id/reguler_banner_ad"
+                                layout="@layout/ads_layout_banner"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

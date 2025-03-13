@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Business Calculator" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textSize="20dp" android:textColor="#01ac3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginBottom="10dp" android:text="Break Event Point Calculator" android:fontFamily="@font/poppins_medium"/>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+                            <Button android:id="@+id/btnBEPUnit" android:background="@drawable/borders_green" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Unit" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                            <Button android:id="@+id/btnBEPPrice" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="Price" android:layout_weight="1" android:textAllCaps="false" android:stateListAnimator="@null"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                            <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Fixed Cost" android:fontFamily="@font/poppins_medium"/>
+                            <LinearLayout android:id="@+id/llBEPFixedCost" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                    <EditText android:textSize="17dp" android:id="@+id/edtBEPFixedCost" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="100" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                    <ImageView android:id="@+id/imgClearBEPFixedCost" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llSellingPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                            <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Selling Price of Each Unit" android:fontFamily="@font/poppins_medium"/>
+                            <LinearLayout android:id="@+id/llBEPSellingPrice" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                    <EditText android:textSize="17dp" android:id="@+id/edtBEPSellingPrice" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                    <ImageView android:id="@+id/imgClearBEPSellingPrice" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llUnit" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                            <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Unit" android:fontFamily="@font/poppins_medium"/>
+                            <LinearLayout android:id="@+id/llBEPUnit" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                    <EditText android:textSize="17dp" android:id="@+id/edtBEPUnit" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="3" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                    <ImageView android:id="@+id/imgClearBEPUnit" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                            <TextView android:textSize="17dp" android:textColor="#2f2f30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="Variable Cost per unit" android:fontFamily="@font/poppins_medium"/>
+                            <LinearLayout android:id="@+id/llBEPVariableCost" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="7dp">
+                                    <EditText android:textSize="17dp" android:id="@+id/edtBEPVariableCost" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                    <ImageView android:id="@+id/imgClearBEPVariableCost" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp">
+                            <Button android:textSize="17dp" android:textColor="#ffffff" android:id="@+id/btnBEPCalculator" android:background="@drawable/background_green" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Calculator" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/poppins_medium"/>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+                            <LinearLayout android:id="@+id/llBEPUnitOutPut" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Unit" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtBEPUnit" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                            <LinearLayout android:id="@+id/llBEPPriceOutPut" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                                <TextView android:textSize="15dp" android:textColor="#2f2f30" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Price" android:layout_weight="0.7" android:fontFamily="@font/poppins_medium"/>
+                                <TextView android:textSize="16dp" android:textColor="#01ac3b" android:id="@+id/txtBEPPrice" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.3" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

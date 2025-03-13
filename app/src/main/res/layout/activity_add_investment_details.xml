@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mutual Fund And SIP" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <LinearLayout android:id="@+id/llBCITitle" android:background="#f8f8f8" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:id="@+id/txtYearNumber" android:layout_width="0dp" android:layout_height="match_parent" android:text="Time" android:layout_weight="1"/>
+                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:id="@+id/txtInterestYW" android:layout_width="0dp" android:layout_height="match_parent" android:text="Deposit" android:layout_weight="1"/>
+                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:id="@+id/txtTotalInterestYW" android:layout_width="0dp" android:layout_height="match_parent" android:text="Interest" android:layout_weight="1"/>
+                        <TextView android:textSize="15dp" android:textColor="#1573ff" android:gravity="center" android:id="@+id/txtTotalBalanceValueYW" android:layout_width="0dp" android:layout_height="match_parent" android:text="Balance" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvAddInvestment" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Currency Converter" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:orientation="vertical" android:background="#f8f8f8" android:paddingLeft="20dp" android:paddingTop="15dp" android:paddingRight="20dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="260dp" android:paddingHorizontal="20dp" android:paddingVertical="15dp">
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2">
+                                <TextView android:textSize="17dp" android:textColor="#01ac3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="From" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="5dp">
+                                    <LinearLayout android:id="@+id/llCCAmount" android:background="@drawable/borders_gray" android:layout_width="0dp" android:layout_height="45dp" android:layout_marginRight="7dp" android:layout_weight="2">
+                                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="7dp">
+                                            <EditText android:textSize="17dp" android:id="@+id/edtCCAmount" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="100" android:layout_weight="6" android:inputType="numberDecimal"/>
+                                            <ImageView android:id="@+id/imgClearCCAmount" android:visibility="gone" android:layout_width="0dp" android:layout_height="23dp" android:layout_marginRight="7dp" android:src="@drawable/ic_remove" android:layout_weight="1"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                    <LinearLayout android:background="@drawable/borders_gray" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                                        <Spinner android:id="@+id/spCCFrom" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="15dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+                                <Button android:textColor="#ffffff" android:layout_gravity="center" android:id="@+id/btnConverter" android:background="@drawable/background_green" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Converter" android:textAllCaps="false" android:paddingHorizontal="20dp"/>
+                                <com.google.android.material.divider.MaterialDivider android:layout_gravity="center" android:layout_width="231dp" android:layout_height="2.5dp" app:dividerColor="#dedede"/>
+                            </FrameLayout>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2">
+                                <TextView android:textSize="17dp" android:textColor="#01ac3b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To" android:fontFamily="@font/poppins_medium"/>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="5dp">
+                                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/borders_gray" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="7dp" android:layout_weight="2">
+                                        <TextView android:textSize="16dp" android:textColor="#2f2f30" android:gravity="center_vertical" android:id="@+id/txtCurrency" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="7dp" android:text="" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                        <ImageView android:id="@+id/imgAddFavorite" android:layout_width="27dp" android:layout_height="27dp" android:layout_margin="7dp" android:src="@drawable/ic_un_favorite"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:background="@drawable/borders_gray" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                                        <Spinner android:id="@+id/spCCTo" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="17dp" android:paddingHorizontal="20dp">
+                            <LinearLayout android:gravity="center" android:id="@+id/llHistory" android:background="@drawable/borders_green" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                                <ImageView android:id="@+id/imgHistoryIcon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_history_green"/>
+                                <TextView android:textSize="17dp" android:textColor="#01ac3b" android:id="@+id/txtHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="History" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:id="@+id/llFavourite" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                                <ImageView android:id="@+id/imgFavouriteIcon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_un_favorite"/>
+                                <TextView android:textSize="17dp" android:textColor="#2f2f30" android:id="@+id/txtFavourite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="Favorite" android:fontFamily="@font/poppins_medium"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:background="#f8f8f8" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                            <TextView android:textSize="16dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:text="From" android:layout_weight="0.9"/>
+                            <TextView android:textSize="16dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="Convert" android:layout_weight="1.2"/>
+                            <TextView android:textSize="16dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="To" android:layout_weight="1.1"/>
+                            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="20dp" android:layout_weight="0.8"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="7dp" android:layout_marginRight="20dp">
+                            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvConverterFavorite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rcvConverterHistory" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                            <TextView android:id="@+id/txtNoData" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

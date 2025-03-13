@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.92">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackBlue" android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cash Count" android:fontFamily="@font/poppins_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="0.08">
+                    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:background="#f8f8f8" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                                <TextView android:textSize="16dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:text="Currency" android:layout_weight="0.9"/>
+                                <TextView android:textSize="16dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="Quantity" android:layout_weight="1.2"/>
+                                <TextView android:textSize="16dp" android:textColor="#1573ff" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="20dp" android:text="Total Amount" android:layout_weight="1.1"/>
+                            </LinearLayout>
+                            <LinearLayout android:orientation="vertical" android:background="@drawable/background_basic_cal_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp">
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 2000" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs2000" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash2000" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 500" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs500" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash500" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 200" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs200" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash200" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 100" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs100" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash100" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 50" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs50" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash50" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 20" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs20" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash20" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                                    <TextView android:textSize="20dp" android:textColor="#2f2f30" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="₹ 10" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <EditText android:gravity="center" android:id="@+id/edtCCQuantityRs10" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="10" android:layout_weight="1" android:inputType="number"/>
+                                    <TextView android:textSize="20dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalCash10" android:layout_width="0dp" android:layout_height="wrap_content" android:text="0" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                                <LinearLayout android:background="@drawable/borders_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginTop="10dp" android:layout_marginRight="7dp" android:layout_marginBottom="10dp">
+                                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                                    <TextView android:textSize="22dp" android:textColor="#2f2f30" android:gravity="center" android:id="@+id/txtCCTotalQuantity" android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                    <TextView android:textSize="22dp" android:textColor="#01ac3b" android:gravity="center" android:id="@+id/txtCCTotalAmount" android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:layout_weight="1" android:fontFamily="@font/poppins_medium"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btm1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <include
+                android:id="@+id/reguler_banner_ad"
+                layout="@layout/ads_layout_banner"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
